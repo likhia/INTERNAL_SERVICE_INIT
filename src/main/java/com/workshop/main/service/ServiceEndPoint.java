@@ -1,4 +1,4 @@
-package com.workshop.common.service;
+package com.workshop.main.service;
 
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;

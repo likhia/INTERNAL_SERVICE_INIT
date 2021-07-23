@@ -1,4 +1,4 @@
-package com.workshop.common.service;
+package com.workshop.main.service;
 
 
 public class CarRegistration {

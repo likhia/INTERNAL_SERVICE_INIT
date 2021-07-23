@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.workshop.common;
+package com.workshop.main;
 
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import org.springframework.boot.SpringApplication;

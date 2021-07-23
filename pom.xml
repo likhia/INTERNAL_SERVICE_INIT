@@ -22,11 +22,11 @@
     <version>2.3.2.Beta1</version>
   </parent>
 
-  <groupId>com.workshop.common</groupId>
-  <artifactId>rest-http</artifactId>
-  <version>2.3.2-1-SNAPSHOT</version>
-  <name>Spring Boot - HTTP Example</name>
-  <description>Spring Boot - HTTP Example</description>
+  <groupId>com.workshop.main</groupId>
+  <artifactId>workshop-main</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>Workshop Example - Register Vehicle</name>
+  <description>Workshop Example - Register Vehicle</description>
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
@@ -223,6 +223,7 @@
                     </property>
                   </all>
                 </labels>
+                <!--
                 <annotations>
                   <all>
                     <property>
@@ -231,6 +232,7 @@
                     </property>
                   </all>
                 </annotations>
+                -->
               </resources>
             </configuration>
           </plugin>

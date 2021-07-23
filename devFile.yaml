@@ -1,12 +1,11 @@
 apiVersion: 1.0.0
 metadata:
-  name: spring-boot-http-booster-1drbc
+  name: INTERNAL_SERVICE_INIT1s5e9
 projects:
-  - name: spring-boot-http-booster
+  - name: INTERNAL_SERVICE_INIT
     source:
       location: 'https://github.com/likhia/INTERNAL_SERVICE_INIT.git'
-      startPoint: master
-      type: git
+      type: github
 components:
   - id: redhat/java8/latest
     type: chePlugin
@@ -31,19 +30,19 @@ components:
 commands:
   - name: 1. Build
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/INTERNAL_SERVICE_INIT'
         type: exec
-        command: 'MAVEN_OPTS="-Xmx200m" && mvn -Duser.home=${HOME} -DskipTests clean install'
+        command: MAVEN_OPTS="-Xmx200m" && mvn -DskipTests clean install
         component: maven
   - name: 2. Run
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/INTERNAL_SERVICE_INIT'
         type: exec
         command: 'MAVEN_OPTS="-Xmx200m" && mvn -Duser.home=${HOME} spring-boot:run'
         component: maven
   - name: 3. Run in debug mode
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/INTERNAL_SERVICE_INIT'
         type: exec
         command: |-
           mvn  -Duser.home=${HOME} spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug
@@ -51,13 +50,13 @@ commands:
         component: maven
   - name: 4. Run tests
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/INTERNAL_SERVICE_INIT'
         type: exec
         command: 'MAVEN_OPTS="-Xmx200m" && mvn -Duser.home=${HOME} verify'
         component: maven
   - name: 5. Log into deployment cluster
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/INTERNAL_SERVICE_INIT'
         type: exec
         command: |
           echo
@@ -67,7 +66,7 @@ commands:
         component: maven
   - name: 6. Deploy to OpenShift
     actions:
-      - workdir: '${CHE_PROJECTS_ROOT}/spring-boot-http-booster'
+      - workdir: '${CHE_PROJECTS_ROOT}/INTERNAL_SERVICE_INIT'
         type: exec
         command: 'mvn fabric8:deploy -Popenshift -DskipTests'
         component: maven
