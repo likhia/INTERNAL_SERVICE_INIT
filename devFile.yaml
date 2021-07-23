@@ -4,7 +4,7 @@ metadata:
 projects:
   - name: spring-boot-http-booster
     source:
-      location: 'https://github.com/likhia/INTERNAL_COMMON.git'
+      location: 'https://github.com/likhia/INTERNAL_SERVICE_INIT.git'
       startPoint: master
       type: git
 components:
