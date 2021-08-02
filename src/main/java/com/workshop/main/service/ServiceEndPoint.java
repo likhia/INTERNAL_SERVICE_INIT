@@ -6,9 +6,19 @@ import javax.ws.rs.Produces;
 
 import org.springframework.stereotype.Component;
 
+//import classes (1)
+
+
+//import classes (2)
+
 @Path("/service")
 @Component
 public class ServiceEndPoint {
+
+    //Get URI from properties
+    
+    
+    //Define Repository
 
     @POST
     @Path("/registervehicle")
@@ -25,4 +35,10 @@ public class ServiceEndPoint {
 
         return plateNo;
     }
+
+    //Invoke common service
+
+
+    //Save new vehicle
+
 }
