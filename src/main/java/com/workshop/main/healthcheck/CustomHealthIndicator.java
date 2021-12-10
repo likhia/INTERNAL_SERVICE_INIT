@@ -22,7 +22,7 @@ public class CustomHealthIndicator implements HealthIndicator {
         return status.build();
         */
         
-        return Health.down().build();
+        return Health.up().build();
     }
 
 }

@@ -6,7 +6,7 @@
       "app.openshift.io/vcs-ref" : "master",
       "app.openshift.io/vcs-uri" : "https://github.com/likhia/INTERNAL_SERVICE_INIT.git",
       "jkube.io/git-branch" : "master",
-      "jkube.io/git-commit" : "441326e72df98927a8f5dcbe358be8b4caaf2e69",
+      "jkube.io/git-commit" : "c2fb9a395ef9b5c15559b73075524a89b9edae40",
       "jkube.io/git-url" : "https://github.com/likhia/INTERNAL_SERVICE_INIT.git",
       "jkube.io/issue-system" : "GitHub",
       "jkube.io/issue-tracker-url" : "https://github.com/snowdrop/spring-boot-bom/issues",
@@ -14,7 +14,7 @@
       "jkube.io/scm-url" : "https://github.com/snowdrop/spring-boot-bom/workshop-main"
     },
     "creationTimestamp" : "2021-12-09T09:06:21Z",
-    "generation" : 17,
+    "generation" : 19,
     "labels" : {
       "app" : "workshop-main",
       "group" : "com.workshop.main",
@@ -22,43 +22,6 @@
       "version" : "1.0.0-SNAPSHOT"
     },
     "managedFields" : [ {
-      "apiVersion" : "apps/v1",
-      "fieldsType" : "FieldsV1",
-      "fieldsV1" : {
-        "f:status" : {
-          "f:availableReplicas" : { },
-          "f:conditions" : {
-            "." : { },
-            "k:{\"type\":\"Available\"}" : {
-              "." : { },
-              "f:lastTransitionTime" : { },
-              "f:lastUpdateTime" : { },
-              "f:message" : { },
-              "f:reason" : { },
-              "f:status" : { },
-              "f:type" : { }
-            },
-            "k:{\"type\":\"Progressing\"}" : {
-              "." : { },
-              "f:lastTransitionTime" : { },
-              "f:lastUpdateTime" : { },
-              "f:message" : { },
-              "f:reason" : { },
-              "f:status" : { },
-              "f:type" : { }
-            }
-          },
-          "f:observedGeneration" : { },
-          "f:readyReplicas" : { },
-          "f:replicas" : { },
-          "f:updatedReplicas" : { }
-        }
-      },
-      "manager" : "kube-controller-manager",
-      "operation" : "Update",
-      "time" : "2021-12-10T06:03:31Z",
-      "subresource" : "status"
-    }, {
       "apiVersion" : "apps/v1",
       "fieldsType" : "FieldsV1",
       "fieldsV1" : {
@@ -216,10 +179,46 @@
       "manager" : "okhttp",
       "operation" : "Update",
       "time" : "2021-12-10T06:03:32Z"
+    }, {
+      "apiVersion" : "apps/v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:status" : {
+          "f:conditions" : {
+            "." : { },
+            "k:{\"type\":\"Available\"}" : {
+              "." : { },
+              "f:lastTransitionTime" : { },
+              "f:lastUpdateTime" : { },
+              "f:message" : { },
+              "f:reason" : { },
+              "f:status" : { },
+              "f:type" : { }
+            },
+            "k:{\"type\":\"Progressing\"}" : {
+              "." : { },
+              "f:lastTransitionTime" : { },
+              "f:lastUpdateTime" : { },
+              "f:message" : { },
+              "f:reason" : { },
+              "f:status" : { },
+              "f:type" : { }
+            }
+          },
+          "f:observedGeneration" : { },
+          "f:replicas" : { },
+          "f:unavailableReplicas" : { },
+          "f:updatedReplicas" : { }
+        }
+      },
+      "manager" : "kube-controller-manager",
+      "operation" : "Update",
+      "time" : "2021-12-10T06:44:36Z",
+      "subresource" : "status"
     } ],
     "name" : "workshop-main",
     "namespace" : "service-test",
-    "resourceVersion" : "648673",
+    "resourceVersion" : "696515",
     "uid" : "35584390-392a-49d3-9481-f8fc44b516ea"
   },
   "spec" : {
@@ -260,7 +259,7 @@
               }
             }
           } ],
-          "image" : "image-registry.openshift-image-registry.svc:5000/service-test/workshop-main@sha256:0574f7f4e2d5c39a04b718b709cc81ba836cb5f0e86f46e6a72d9aebb26d8bbb",
+          "image" : "image-registry.openshift-image-registry.svc:5000/service-test/workshop-main@sha256:3a4d767928a30c41630d25b839cf3b66d096eb6ae118ffcc180c2a9b65934389",
           "imagePullPolicy" : "IfNotPresent",
           "livenessProbe" : {
             "failureThreshold" : 3,
@@ -332,25 +331,24 @@
     }
   },
   "status" : {
-    "availableReplicas" : 2,
     "conditions" : [ {
-      "lastTransitionTime" : "2021-12-09T09:06:21Z",
-      "lastUpdateTime" : "2021-12-10T05:33:31Z",
-      "message" : "ReplicaSet \"workshop-main-7c8b9d97d7\" has successfully progressed.",
-      "reason" : "NewReplicaSetAvailable",
-      "status" : "True",
-      "type" : "Progressing"
-    }, {
-      "lastTransitionTime" : "2021-12-10T06:03:31Z",
-      "lastUpdateTime" : "2021-12-10T06:03:31Z",
-      "message" : "Deployment has minimum availability.",
-      "reason" : "MinimumReplicasAvailable",
-      "status" : "True",
+      "lastTransitionTime" : "2021-12-10T06:42:26Z",
+      "lastUpdateTime" : "2021-12-10T06:42:26Z",
+      "message" : "Deployment does not have minimum availability.",
+      "reason" : "MinimumReplicasUnavailable",
+      "status" : "False",
       "type" : "Available"
+    }, {
+      "lastTransitionTime" : "2021-12-10T06:54:37Z",
+      "lastUpdateTime" : "2021-12-10T06:54:37Z",
+      "message" : "ReplicaSet \"workshop-main-dd5ff5cb7\" has timed out progressing.",
+      "reason" : "ProgressDeadlineExceeded",
+      "status" : "False",
+      "type" : "Progressing"
     } ],
-    "observedGeneration" : 16,
-    "readyReplicas" : 2,
+    "observedGeneration" : 18,
     "replicas" : 2,
-    "updatedReplicas" : 2
+    "unavailableReplicas" : 2,
+    "updatedReplicas" : 1
   }
 }
