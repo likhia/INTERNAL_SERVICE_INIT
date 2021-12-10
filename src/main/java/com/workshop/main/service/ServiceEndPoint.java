@@ -23,9 +23,17 @@ public class ServiceEndPoint {
     @POST
     @Path("/registervehicle")
     @Produces("application/json")
-    public String registerVehicle(CarRegistration carInfo) {
+    public String registerVehicle(CarRegistration carInfo) throws Exception {
         String plateNo = "UNASSIGNED";
 
+        String failure = System.getenv("FAILURE");
+
+        if (failure != null && failure.toLowerCase().equals("true")) {
+            throw new Exception("System error");
+        } 
+
+
+        System.out.println("System.env.failure : " + failure);
         System.out.println("Model : " + carInfo.getModel());
         System.out.println("Color : " + carInfo.getColor());
         System.out.println("Type : " + carInfo.getType());

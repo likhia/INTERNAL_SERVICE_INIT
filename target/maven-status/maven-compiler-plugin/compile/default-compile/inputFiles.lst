@@ -1,3 +1,4 @@
 /projects/INTERNAL_SERVICE_INIT/src/main/java/com/workshop/main/service/CarRegistration.java
+/projects/INTERNAL_SERVICE_INIT/src/main/java/com/workshop/main/healthcheck/CustomHealthIndicator.java
 /projects/INTERNAL_SERVICE_INIT/src/main/java/com/workshop/main/service/ServiceEndPoint.java
 /projects/INTERNAL_SERVICE_INIT/src/main/java/com/workshop/main/ExampleApplication.java
