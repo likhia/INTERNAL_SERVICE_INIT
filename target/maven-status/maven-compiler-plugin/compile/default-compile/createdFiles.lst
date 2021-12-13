@@ -1,2 +1,4 @@
-static/index.html
-application.properties
+com/workshop/main/service/CarRegistration.class
+com/workshop/main/healthcheck/CustomHealthIndicator.class
+com/workshop/main/ExampleApplication.class
+com/workshop/main/service/ServiceEndPoint.class
