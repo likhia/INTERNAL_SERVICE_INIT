@@ -41,6 +41,10 @@ public class ServiceEndPoint {
         System.out.println("Created Year : " + carInfo.getCreatedYear());
         System.out.println("Used: " + carInfo.getUsed());
 
+        //Invoke common webservice to get the car plate number based on Type attribute
+
+        //Invoke save method
+
         return plateNo;
     }
 
